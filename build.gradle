@@ -78,9 +78,6 @@ task copyStyles( type: Copy ) {
         include '**/*.css'
         into 'lib'
     }
-    from( "$srcDir/images" ) {
-        into 'images'
-    }
     from( "$srcDir/font" ) {
         into 'font'
     }
