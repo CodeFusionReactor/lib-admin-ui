@@ -1,39 +1,3 @@
-.button-background(@bg: @form-button-bg, @hoverBg: lighten(@bg, 10%)) {
-  background-color: @bg;
-
-  &:hover:not(:disabled) {
-    background-color: @hoverBg;
-  }
-}
-
-.button-foreground(@color: @form-button-font, @hoverColor: darken(@color, 10%), @activeColor: @color) {
-
-  &:before, span {
-    color: @color;
-  }
-
-  &:hover:not(:disabled) {
-
-    &:before, span {
-      color: @hoverColor;
-    }
-  }
-
-  &.active {
-
-    &:hover:not(:disabled) {
-
-      &:before, span {
-        color: darken(@activeColor, 10%);
-      }
-    }
-
-    &:before, span {
-      color: @activeColor;
-    }
-  }
-}
-
 .button(@color: @form-button-font, @bg: @form-button-bg, @hoverColor: @color, @hoverBg: lighten(@bg, 10%), @useFocus: true) {
   .button-background(@bg, @hoverBg);
   .button-foreground(@color, @hoverColor, @admin-button-blue1);
@@ -55,11 +19,6 @@
     opacity: 0.5;
     cursor: default;
   }
-/*
-  & when (@useFocus = true) {
-    .focusable();
-  }
-*/
 }
 
 .menu-action-button() {
